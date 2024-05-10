@@ -1,0 +1,70 @@
+{% extends 'hospital/homebase.html' %}
+{% load static %}
+
+{% block content %}
+<head>
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background-image: url('{% static "images/bg.jpg" %}');
+      background-size: cover;
+      background-repeat: no-repeat;
+      text-align: center; 
+    }
+
+    .jumbotron h5,
+    h3 {
+      text-align: center;
+    }
+
+    .alert {
+      margin: 0px;
+    }
+
+    .glow {
+      font-size: 50px;
+      color: white;
+      text-align: center;
+    }
+
+    .button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #3385ddb9;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease; 
+    }
+
+    .button:hover {
+      background-color: #fff; /* Change background color on hover */
+      transform: scale(1.05); /* Add a slight scale effect on hover */
+      color: "#3385ddb9"; /* Change text color on hover */
+    }
+
+  </style>
+</head>
+
+<br><br>
+
+<div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
+  <br>
+  <h5 class="display-3 glow">AI HealthBot</h5>
+  
+  <p class="lead">Your Personal Health Assistant</p>
+  <br>
+  
+  <p class="lead">
+    <a class="button" href="/patientclick" role="button">Get Started</a>
+  </p>
+  <br><br>
+</div>
+
+<br><br><br><br>
+
+{% include "hospital/admin_doctor_patient_card.html" %}
+<br><br><br>
+{% endblock content %}
